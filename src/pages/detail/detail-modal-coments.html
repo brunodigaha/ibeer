@@ -14,19 +14,12 @@
 
 <ion-content>
     <ion-list>
-        <ion-item>
+        <ion-item *ngFor="let comment of comments">
             <ion-avatar item-start>
-                <img src="{{character.image}}">
+                <img src="{{comment.image}}">
             </ion-avatar>
-            <h2>{{character.name}}</h2>
-            <p>{{character.quote}}</p>
-        </ion-item>
-
-        <ion-item *ngFor="let item of character['items']">
-            {{item.title}}
-            <ion-note item-end>
-                {{item.note}}
-            </ion-note>
+            <h2>{{comment.name}}</h2>
+            <p>{{comment.quote}}</p>
         </ion-item>
     </ion-list>
 </ion-content>

@@ -44,19 +44,20 @@ var DetailPage = (function () {
     DetailPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad DetailPage');
     };
-    DetailPage.prototype.openModal = function (characterNum) {
-        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__detail_modal_coments__["a" /* ModalContentPage */], characterNum);
+    DetailPage.prototype.openModal = function () {
+        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__detail_modal_coments__["a" /* ModalContentPage */]);
         modal.present();
     };
     return DetailPage;
 }());
 DetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-detail',template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/'<!--\n\n  Generated template for the DetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Informacoes</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n\n\n  <img src="../../assets/imgs/prontocerveja.png">\n\n  <ion-item>\n\n    <!-- <ion-avatar item-start>\n\n          <img src="img/marty-avatar.png">\n\n          <ion-icon name="ios-beer-outline"></ion-icon>\n\n        </ion-avatar> -->\n\n    <h1>{{ company.title }}</h1>\n\n    <p> {{ company.phone }}</p>\n\n    <p> {{ company.address }}</p>\n\n  </ion-item>\n\n\n\n  <ion-card-content>\n\n    <p>O Ponto da Cerveja é um local para compra de bebidas em geral, funcionando a mais de 5 anos em Guaxupé. Como uma distribuidora\n\n      de bebidas realiza entrega para a cidade. Ligue e compre !\n\n    </p>\n\n  </ion-card-content>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button icon-left clear small>\n\n        <ion-icon name="thumbs-up"></ion-icon>\n\n        <div>12 Curtidas </div>\n\n      </button>\n\n    </ion-col>\n\n    <ion-col>\n\n      <button ion-button icon-left clear small (click)="openModal({charNum: 0})">\n\n        <ion-icon name="text"></ion-icon>\n\n        <div>4 Comentarios</div>\n\n      </button>\n\n    </ion-col>\n\n    <!-- <ion-col center text-center>\n\n      <ion-note>\n\n        11h ago\n\n      </ion-note>\n\n    </ion-col> -->\n\n  </ion-row>\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/
+        selector: 'page-detail',template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/'<!--\n\n  Generated template for the DetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Informacoes</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n\n\n  <img src="../../assets/imgs/prontocerveja.png">\n\n  <ion-item>\n\n    <!-- <ion-avatar item-start>\n\n          <img src="img/marty-avatar.png">\n\n          <ion-icon name="ios-beer-outline"></ion-icon>\n\n        </ion-avatar> -->\n\n    <h1>{{ company.title }}</h1>\n\n    <p> {{ company.phone }}</p>\n\n    <p> {{ company.address }}</p>\n\n  </ion-item>\n\n\n\n  <ion-card-content>\n\n    <p>O Ponto da Cerveja é um local para compra de bebidas em geral, funcionando a mais de 5 anos em Guaxupé. Como uma distribuidora\n\n      de bebidas realiza entrega para a cidade. Ligue e compre !\n\n    </p>\n\n  </ion-card-content>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button icon-left clear small>\n\n        <ion-icon name="thumbs-up"></ion-icon>\n\n        <div>12 Curtidas </div>\n\n      </button>\n\n    </ion-col>\n\n    <ion-col>\n\n      <button ion-button icon-left clear small (click)="openModal()">\n\n        <ion-icon name="text"></ion-icon>\n\n        <div>4 Comentarios</div>\n\n      </button>\n\n    </ion-col>\n\n    <!-- <ion-col center text-center>\n\n      <ion-note>\n\n        11h ago\n\n      </ion-note>\n\n    </ion-col> -->\n\n  </ion-row>\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]) === "function" && _d || Object])
 ], DetailPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=detail.js.map
 
 /***/ }),
@@ -125,39 +126,25 @@ var ModalContentPage = (function () {
     function ModalContentPage(params, viewCtrl) {
         this.params = params;
         this.viewCtrl = viewCtrl;
-        var characters = [
+        var comments = [
             {
-                name: 'Gollum',
-                quote: 'Sneaky little hobbitses!',
+                name: 'Marcos',
                 image: 'assets/imgs/gravatar.png',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'River Folk' },
-                    { title: 'Alter Ego', note: 'Smeagol' }
-                ]
+                quote: 'cerveja geladinha'
             },
             {
-                name: 'Frodo',
-                quote: 'Go back, Sam! I\'m going to Mordor alone!',
-                image: 'assets/img/avatar-frodo.jpg',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'Shire Folk' },
-                    { title: 'Weapon', note: 'Sting' }
-                ]
+                name: 'Jane',
+                image: 'assets/imgs/gravatar.png',
+                quote: 'A entrega eh bem geladinha'
             },
             {
-                name: 'Samwise Gamgee',
-                quote: 'What we need is a few good taters.',
-                image: 'assets/img/avatar-samwise.jpg',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'Shire Folk' },
-                    { title: 'Nickname', note: 'Sam' }
-                ]
+                name: 'Cleriston',
+                image: 'assets/imgs/gravatar.png',
+                quote: 'Tem aperitivos gostosos'
             }
         ];
-        this.character = characters[this.params.get('charNum')];
+        // this.comments = comments[this.params.get('charNum')];
+        this.comments = comments;
     }
     ModalContentPage.prototype.dismiss = function () {
         this.viewCtrl.dismiss();
@@ -165,11 +152,12 @@ var ModalContentPage = (function () {
     return ModalContentPage;
 }());
 ModalContentPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail-modal-coments.html"*/'<ion-header>\n\n    <ion-toolbar>\n\n        <ion-title>\n\n            Description\n\n        </ion-title>\n\n        <ion-buttons start>\n\n            <button ion-button (click)="dismiss()">\n\n                <span ion-text color="primary" showWhen="ios">Cancel</span>\n\n                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n\n            </button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-list>\n\n        <ion-item>\n\n            <ion-avatar item-start>\n\n                <img src="{{character.image}}">\n\n            </ion-avatar>\n\n            <h2>{{character.name}}</h2>\n\n            <p>{{character.quote}}</p>\n\n        </ion-item>\n\n\n\n        <ion-item *ngFor="let item of character[\'items\']">\n\n            {{item.title}}\n\n            <ion-note item-end>\n\n                {{item.note}}\n\n            </ion-note>\n\n        </ion-item>\n\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail-modal-coments.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail-modal-coments.html"*/'<ion-header>\n\n    <ion-toolbar>\n\n        <ion-title>\n\n            Description\n\n        </ion-title>\n\n        <ion-buttons start>\n\n            <button ion-button (click)="dismiss()">\n\n                <span ion-text color="primary" showWhen="ios">Cancel</span>\n\n                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n\n            </button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-list>\n\n        <ion-item *ngFor="let comment of comments">\n\n            <ion-avatar item-start>\n\n                <img src="{{comment.image}}">\n\n            </ion-avatar>\n\n            <h2>{{comment.name}}</h2>\n\n            <p>{{comment.quote}}</p>\n\n        </ion-item>\n\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail-modal-coments.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]) === "function" && _b || Object])
 ], ModalContentPage);
 
+var _a, _b;
 //# sourceMappingURL=detail-modal-coments.js.map
 
 /***/ }),

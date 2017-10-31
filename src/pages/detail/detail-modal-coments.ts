@@ -6,43 +6,29 @@ import { ViewController, NavParams } from 'ionic-angular';
     templateUrl: 'detail-modal-coments.html'
 })
 export class ModalContentPage {
-    character;
+    comments;
 
     constructor(public params: NavParams, public viewCtrl: ViewController) {
 
-        var characters = [
+        var comments = [
             {
-                name: 'Gollum',
-                quote: 'Sneaky little hobbitses!',
+                name: 'Marcos',
                 image: 'assets/imgs/gravatar.png',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'River Folk' },
-                    { title: 'Alter Ego', note: 'Smeagol' }
-                ]
+                quote: 'cerveja geladinha'
             },
             {
-                name: 'Frodo',
-                quote: 'Go back, Sam! I\'m going to Mordor alone!',
-                image: 'assets/img/avatar-frodo.jpg',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'Shire Folk' },
-                    { title: 'Weapon', note: 'Sting' }
-                ]
+                name: 'Jane',
+                image: 'assets/imgs/gravatar.png',
+                quote: 'A entrega eh bem geladinha'
             },
             {
-                name: 'Samwise Gamgee',
-                quote: 'What we need is a few good taters.',
-                image: 'assets/img/avatar-samwise.jpg',
-                items: [
-                    { title: 'Race', note: 'Hobbit' },
-                    { title: 'Culture', note: 'Shire Folk' },
-                    { title: 'Nickname', note: 'Sam' }
-                ]
+                name: 'Cleriston',
+                image: 'assets/imgs/gravatar.png',
+                quote: 'Tem aperitivos gostosos'
             }
         ];
-        this.character = characters[this.params.get('charNum')];
+        // this.comments = comments[this.params.get('charNum')];
+        this.comments = comments;
     }
 
     dismiss() {
