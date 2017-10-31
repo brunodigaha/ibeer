@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      App Cerveja
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  Empresas
+  <ion-list>
+      <button ion-item *ngFor="let company of companies" (click)="goToDetail(company.id)">
+        {{ company.title }}
+      </button>
+    </ion-list>
+</ion-content>
