@@ -8,7 +8,7 @@ webpackJsonp([1],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_companies_service__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modal_coments__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detail_modal_coments__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -45,14 +45,14 @@ var DetailPage = (function () {
         console.log('ionViewDidLoad DetailPage');
     };
     DetailPage.prototype.openModal = function (characterNum) {
-        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__modal_coments__["a" /* ModalContentPage */], characterNum);
+        var modal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__detail_modal_coments__["a" /* ModalContentPage */], characterNum);
         modal.present();
     };
     return DetailPage;
 }());
 DetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-detail',template:/*ion-inline-start:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/detail/detail.html"*/'<!--\n  Generated template for the DetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Informacoes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n\n\n  <img src="../../assets/imgs/prontocerveja.png">\n  <ion-item>\n    <!-- <ion-avatar item-start>\n          <img src="img/marty-avatar.png">\n          <ion-icon name="ios-beer-outline"></ion-icon>\n        </ion-avatar> -->\n    <h1>{{ company.title }}</h1>\n    <p> {{ company.phone }}</p>\n    <p> {{ company.address }}</p>\n  </ion-item>\n\n  <ion-card-content>\n    <p>O Ponto da Cerveja é um local para compra de bebidas em geral, funcionando a mais de 5 anos em Guaxupé. Como uma distribuidora\n      de bebidas realiza entrega para a cidade. Ligue e compre !\n    </p>\n  </ion-card-content>\n\n  <ion-row>\n    <ion-col>\n      <button ion-button icon-left clear small>\n        <ion-icon name="thumbs-up"></ion-icon>\n        <div>12 Curtidas </div>\n      </button>\n    </ion-col>\n    <ion-col>\n      <button ion-button icon-left clear small (click)="openModal({charNum: 0})">\n        <ion-icon name="text"></ion-icon>\n        <div>4 Comentarios</div>\n      </button>\n    </ion-col>\n    <!-- <ion-col center text-center>\n      <ion-note>\n        11h ago\n      </ion-note>\n    </ion-col> -->\n  </ion-row>\n\n\n</ion-content>'/*ion-inline-end:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/detail/detail.html"*/
+        selector: 'page-detail',template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/'<!--\n\n  Generated template for the DetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Informacoes</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n\n\n  <img src="../../assets/imgs/prontocerveja.png">\n\n  <ion-item>\n\n    <!-- <ion-avatar item-start>\n\n          <img src="img/marty-avatar.png">\n\n          <ion-icon name="ios-beer-outline"></ion-icon>\n\n        </ion-avatar> -->\n\n    <h1>{{ company.title }}</h1>\n\n    <p> {{ company.phone }}</p>\n\n    <p> {{ company.address }}</p>\n\n  </ion-item>\n\n\n\n  <ion-card-content>\n\n    <p>O Ponto da Cerveja é um local para compra de bebidas em geral, funcionando a mais de 5 anos em Guaxupé. Como uma distribuidora\n\n      de bebidas realiza entrega para a cidade. Ligue e compre !\n\n    </p>\n\n  </ion-card-content>\n\n\n\n  <ion-row>\n\n    <ion-col>\n\n      <button ion-button icon-left clear small>\n\n        <ion-icon name="thumbs-up"></ion-icon>\n\n        <div>12 Curtidas </div>\n\n      </button>\n\n    </ion-col>\n\n    <ion-col>\n\n      <button ion-button icon-left clear small (click)="openModal({charNum: 0})">\n\n        <ion-icon name="text"></ion-icon>\n\n        <div>4 Comentarios</div>\n\n      </button>\n\n    </ion-col>\n\n    <!-- <ion-col center text-center>\n\n      <ion-note>\n\n        11h ago\n\n      </ion-note>\n\n    </ion-col> -->\n\n  </ion-row>\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]])
 ], DetailPage);
@@ -165,12 +165,12 @@ var ModalContentPage = (function () {
     return ModalContentPage;
 }());
 ModalContentPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/detail/modal-coments.html"*/'<ion-header>\n    <ion-toolbar>\n        <ion-title>\n            Description\n        </ion-title>\n        <ion-buttons start>\n            <button ion-button (click)="dismiss()">\n                <span ion-text color="primary" showWhen="ios">Cancel</span>\n                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-avatar item-start>\n                <img src="{{character.image}}">\n            </ion-avatar>\n            <h2>{{character.name}}</h2>\n            <p>{{character.quote}}</p>\n        </ion-item>\n\n        <ion-item *ngFor="let item of character[\'items\']">\n            {{item.title}}\n            <ion-note item-end>\n                {{item.note}}\n            </ion-note>\n        </ion-item>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/detail/modal-coments.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail-modal-coments.html"*/'<ion-header>\n\n    <ion-toolbar>\n\n        <ion-title>\n\n            Description\n\n        </ion-title>\n\n        <ion-buttons start>\n\n            <button ion-button (click)="dismiss()">\n\n                <span ion-text color="primary" showWhen="ios">Cancel</span>\n\n                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>\n\n            </button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-list>\n\n        <ion-item>\n\n            <ion-avatar item-start>\n\n                <img src="{{character.image}}">\n\n            </ion-avatar>\n\n            <h2>{{character.name}}</h2>\n\n            <p>{{character.quote}}</p>\n\n        </ion-item>\n\n\n\n        <ion-item *ngFor="let item of character[\'items\']">\n\n            {{item.title}}\n\n            <ion-note item-end>\n\n                {{item.note}}\n\n            </ion-note>\n\n        </ion-item>\n\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail-modal-coments.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
 ], ModalContentPage);
 
-//# sourceMappingURL=modal-coments.js.map
+//# sourceMappingURL=detail-modal-coments.js.map
 
 /***/ }),
 
@@ -214,7 +214,7 @@ __decorate([
 ], HomePage.prototype, "nav", void 0);
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      App Cerveja\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h5>Empresas</h5>\n  <ion-list>\n\n\n    <ion-card *ngFor="let company of companies" (click)="goToDetail(company.id)">\n\n      <ion-item>\n        <ion-avatar item-start>\n          <img src="../../assets/imgs/pontocervejalogo.png">\n          <!-- <ion-icon name="ios-beer-outline"></ion-icon> -->\n        </ion-avatar>\n        <h2>{{ company.title }}</h2>\n        <p> {{ company.phone}}</p>\n      </ion-item>\n\n      <img src="img/advance-card-bttf.png">\n\n      <ion-card-content>\n        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!\n          Whoa. This is heavy.</p>\n      </ion-card-content>\n\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-left clear small>\n            <ion-icon name="thumbs-up"></ion-icon>\n            <div>12 Curtidas</div>\n          </button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-left clear small>\n            <ion-icon name="text"></ion-icon>\n            <div>4 Comentários</div>\n          </button>\n        </ion-col>\n        <ion-col center text-center>\n          <ion-note>\n            11h ago\n          </ion-note>\n        </ion-col>\n      </ion-row>\n\n    </ion-card>\n\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      App Cerveja\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <h5>Empresas</h5>\n\n  <ion-list>\n\n\n\n\n\n    <ion-card *ngFor="let company of companies" (click)="goToDetail(company.id)">\n\n\n\n      <ion-item>\n\n        <ion-avatar item-start>\n\n          <img src="../../assets/imgs/pontocervejalogo.png">\n\n          <!-- <ion-icon name="ios-beer-outline"></ion-icon> -->\n\n        </ion-avatar>\n\n        <h2>{{ company.title }}</h2>\n\n        <p> {{ company.phone}}</p>\n\n      </ion-item>\n\n\n\n      <img src="img/advance-card-bttf.png">\n\n\n\n      <ion-card-content>\n\n        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!\n\n          Whoa. This is heavy.</p>\n\n      </ion-card-content>\n\n\n\n      <ion-row>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n            <ion-icon name="thumbs-up"></ion-icon>\n\n            <div>12 Curtidas</div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n            <ion-icon name="text"></ion-icon>\n\n            <div>4 Comentários</div>\n\n          </button>\n\n        </ion-col>\n\n        <ion-col center text-center>\n\n          <ion-note>\n\n            11h ago\n\n          </ion-note>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n    </ion-card>\n\n\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */]])
 ], HomePage);
@@ -251,7 +251,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_companies_service__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_detail_detail__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_detail_modal_coments__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail_modal_coments__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -279,7 +279,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
             __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_detail_detail__["a" /* DetailPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_detail_modal_coments__["a" /* ModalContentPage */]
+            __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail_modal_coments__["a" /* ModalContentPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -294,7 +294,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
             __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_detail_detail__["a" /* DetailPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_detail_modal_coments__["a" /* ModalContentPage */]
+            __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail_modal_coments__["a" /* ModalContentPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -346,7 +346,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalController, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CompaniesService } from "../../services/companies.service"
-import { ModalContentPage } from "./modal-coments"
+import { ModalContentPage } from "./detail-modal-coments"
 /**
  * Generated class for the DetailPage page.
  *

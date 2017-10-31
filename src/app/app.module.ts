@@ -8,7 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CompaniesService } from '../services/companies.service';
 import { DetailPage } from '../pages/detail/detail';
-import { ModalContentPage } from '../pages/detail/modal-coments'
+import { ModalContentPage } from '../pages/detail/detail-modal-coments'
 
 @NgModule({
   declarations: [

@@ -3,7 +3,7 @@ import { ViewController, NavParams } from 'ionic-angular';
 
 
 @Component({
-    templateUrl: 'modal-coments.html'
+    templateUrl: 'detail-modal-coments.html'
 })
 export class ModalContentPage {
     character;
