@@ -9,6 +9,7 @@ webpackJsonp([1],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_companies_service__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__detail_modal_coments__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_call_number__ = __webpack_require__(266);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,6 +23,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the DetailPage page.
  *
@@ -29,18 +31,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var DetailPage = (function () {
-    function DetailPage(navCtrl, navParams, companiesService, modalCtrl) {
+    function DetailPage(navCtrl, navParams, companiesService, modalCtrl, callNumber) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.companiesService = companiesService;
         this.modalCtrl = modalCtrl;
+        this.callNumber = callNumber;
         this.company = { id: null, title: null };
         this.id = null;
+        this.phone = "";
         this.id = navParams.get('id');
         if (this.id != 0) {
             this.company = companiesService.getCompany(this.id);
         }
     }
+    DetailPage.prototype.callPhone = function (phone) {
+        this.callNumber.callNumber(phone, true)
+            .then(function () { return console.log('Launched dialer!'); })
+            .catch(function () { return console.log('Error launching dialer'); });
+    };
     DetailPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad DetailPage');
     };
@@ -52,11 +61,12 @@ var DetailPage = (function () {
 }());
 DetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-detail',template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/'<!--\n\n  Generated template for the DetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Empresa</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n\n\n  <img src="../../assets/imgs/prontocerveja.png">\n\n  <ion-item>\n\n    <!-- <ion-avatar item-start>\n\n          <img src="img/marty-avatar.png">\n\n          <ion-icon name="ios-beer-outline"></ion-icon>\n\n        </ion-avatar> -->\n\n    <h1>{{ company.title }}</h1>\n\n    <p><ion-icon name="call"> {{ company.phone }} </ion-icon></p>\n\n    <p><ion-icon name="home"> {{ company.address }}</ion-icon></p>\n\n  </ion-item>\n\n  <ion-row>\n\n      <ion-col>\n\n        <button ion-button icon-left clear small>\n\n          <ion-icon name="thumbs-up"></ion-icon>\n\n          <div>12 Curtidas</div>\n\n        </button>\n\n      </ion-col>\n\n      <ion-col>\n\n        <button ion-button icon-left clear small (click)="openModal()">\n\n          <ion-icon name="text"></ion-icon>\n\n          <div>4 Comentários</div>\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n  <ion-card-content>\n\n    <p>O Ponto da Cerveja é um local para compra de bebidas em geral, funcionando a mais de 5 anos em Guaxupé. Como uma distribuidora\n\n      de bebidas realiza entrega para a cidade. Ligue e compre !\n\n    </p>\n\n  </ion-card-content>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n      <ion-title><button ion-button color="secondary" full><ion-icon name="call"></ion-icon><span margin-left>Chamar</span></button></ion-title>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/
+        selector: 'page-detail',template:/*ion-inline-start:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/'<!--\n\n  Generated template for the DetailPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Empresa</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n\n\n\n\n  <img src="../../assets/imgs/prontocerveja.png">\n\n  <ion-item>\n\n    <!-- <ion-avatar item-start>\n\n          <img src="img/marty-avatar.png">\n\n          <ion-icon name="ios-beer-outline"></ion-icon>\n\n        </ion-avatar> -->\n\n    <h1>{{ company.title }}</h1>\n\n    <p><ion-icon name="call"> {{ company.phone }} </ion-icon></p>\n\n    <p><ion-icon name="home"> {{ company.address }}</ion-icon></p>\n\n  </ion-item>\n\n  <ion-row>\n\n      <ion-col>\n\n        <button ion-button icon-left clear small>\n\n          <ion-icon name="thumbs-up"></ion-icon>\n\n          <div>12 Curtidas</div>\n\n        </button>\n\n      </ion-col>\n\n      <ion-col>\n\n        <button ion-button icon-left clear small (click)="openModal()">\n\n          <ion-icon name="text"></ion-icon>\n\n          <div>4 Comentários</div>\n\n        </button>\n\n      </ion-col>\n\n    </ion-row>\n\n  <ion-card-content>\n\n    <p>O Ponto da Cerveja é um local para compra de bebidas em geral, funcionando a mais de 5 anos em Guaxupé. Como uma distribuidora\n\n      de bebidas realiza entrega para a cidade. Ligue e compre !\n\n    </p>\n\n  </ion-card-content>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n  <ion-toolbar>\n\n      <ion-title (click)="callPhone(company.phone)"><button ion-button color="secondary" full><ion-icon name="call"></ion-icon><span margin-left>Chamar</span></button></ion-title>\n\n  </ion-toolbar>\n\n</ion-footer>'/*ion-inline-end:"C:\Users\bruce\Documents\git\appcerveja\src\pages\detail\detail.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ModalController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_call_number__["a" /* CallNumber */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_call_number__["a" /* CallNumber */]) === "function" && _e || Object])
 ], DetailPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=detail.js.map
 
 /***/ }),
@@ -233,17 +243,19 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(264);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_companies_service__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_detail_detail__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail_modal_coments__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_call_number__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_companies_service__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_detail_detail_modal_coments__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -262,14 +274,14 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_detail_detail__["a" /* DetailPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail_modal_coments__["a" /* ModalContentPage */]
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail__["a" /* DetailPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_detail_detail_modal_coments__["a" /* ModalContentPage */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/detail/detail.module#DetailPageModule', name: 'DetailPage', segment: 'detail', priority: 'low', defaultHistory: [] }
                 ]
@@ -277,16 +289,17 @@ AppModule = __decorate([
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
         entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_6__pages_home_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_detail_detail__["a" /* DetailPage */],
-            __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail_modal_coments__["a" /* ModalContentPage */]
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */],
+            __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
+            __WEBPACK_IMPORTED_MODULE_9__pages_detail_detail__["a" /* DetailPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_detail_detail_modal_coments__["a" /* ModalContentPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] },
-            __WEBPACK_IMPORTED_MODULE_7__services_companies_service__["a" /* CompaniesService */]
+            __WEBPACK_IMPORTED_MODULE_8__services_companies_service__["a" /* CompaniesService */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_call_number__["a" /* CallNumber */]
         ]
     })
 ], AppModule);

@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { CallNumber } from '@ionic-native/call-number'
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -32,7 +33,8 @@ import { ModalContentPage } from '../pages/detail/detail-modal-coments'
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    CompaniesService
+    CompaniesService,
+    CallNumber
   ]
 })
 export class AppModule { }
