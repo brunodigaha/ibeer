@@ -19,7 +19,6 @@ import { CallNumber } from '@ionic-native/call-number'
 export class DetailPage {
   company = { id: null, title: null };
   id = null;
-  phone = "";
   constructor(public navCtrl: NavController, public navParams: NavParams, public companiesService: CompaniesService, public modalCtrl: ModalController, private callNumber: CallNumber) {
     this.id = navParams.get('id');
     if (this.id != 0) {

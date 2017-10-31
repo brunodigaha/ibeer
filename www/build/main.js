@@ -39,7 +39,6 @@ var DetailPage = (function () {
         this.callNumber = callNumber;
         this.company = { id: null, title: null };
         this.id = null;
-        this.phone = "";
         this.id = navParams.get('id');
         if (this.id != 0) {
             this.company = companiesService.getCompany(this.id);
