@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ModalController, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CompaniesService } from "../../services/companies.service"
+import { ModalContentPage } from "./modal-coments"
 /**
  * Generated class for the DetailPage page.
  *
@@ -11,12 +12,12 @@ import { CompaniesService } from "../../services/companies.service"
 @IonicPage()
 @Component({
   selector: 'page-detail',
-  templateUrl: 'detail.html',
+  templateUrl: 'detail.html'
 })
 export class DetailPage {
   company = { id: null, title: null };
   id = null;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public companiesService: CompaniesService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public companiesService: CompaniesService, public modalCtrl: ModalController) {
     this.id = navParams.get('id');
     if (this.id != 0) {
       this.company = companiesService.getCompany(this.id);
@@ -27,4 +28,12 @@ export class DetailPage {
     console.log('ionViewDidLoad DetailPage');
   }
 
+  openModal(characterNum) {
+
+    let modal = this.modalCtrl.create(ModalContentPage, characterNum);
+    modal.present();
+  }
+
 }
+
+

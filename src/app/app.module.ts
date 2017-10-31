@@ -8,12 +8,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CompaniesService } from '../services/companies.service';
 import { DetailPage } from '../pages/detail/detail';
+import { ModalContentPage } from '../pages/detail/modal-coments'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DetailPage
+    DetailPage,
+    ModalContentPage
   ],
   imports: [
     BrowserModule,
@@ -23,13 +25,14 @@ import { DetailPage } from '../pages/detail/detail';
   entryComponents: [
     MyApp,
     HomePage,
-    DetailPage
+    DetailPage,
+    ModalContentPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     CompaniesService
   ]
 })
-export class AppModule {}
+export class AppModule { }
