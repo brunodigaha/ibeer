@@ -45,7 +45,7 @@ var DetailPage = (function () {
 }());
 DetailPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-detail',template:/*ion-inline-start:"/Users/mmartins/Documents/bitbucket/appcerveja/src/pages/detail/detail.html"*/'<!--\n  Generated template for the DetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Informacoes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Empresa</ion-label>\n      <ion-input type="text" disabled="true" [(ngModel)]="company.title"></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label floating>Endereço</ion-label>\n        <ion-input type="text" disabled="true" [(ngModel)]="company.address"></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label floating>Bairro</ion-label>\n        <ion-input type="text" disabled="true" [(ngModel)]="company.neighborhood"></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label floating>Telefone</ion-label>\n        <ion-input type="text" disabled="true" [(ngModel)]="company.phone"></ion-input>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mmartins/Documents/bitbucket/appcerveja/src/pages/detail/detail.html"*/,
+        selector: 'page-detail',template:/*ion-inline-start:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/detail/detail.html"*/'<!--\n  Generated template for the DetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Informacoes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Empresa</ion-label>\n      <ion-input type="text" disabled="true" [(ngModel)]="company.title"></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label floating>Endereço</ion-label>\n        <ion-input type="text" disabled="true" [(ngModel)]="company.address"></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label floating>Bairro</ion-label>\n        <ion-input type="text" disabled="true" [(ngModel)]="company.neighborhood"></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-label floating>Telefone</ion-label>\n        <ion-input type="text" disabled="true" [(ngModel)]="company.phone"></ion-input>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/detail/detail.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */]])
 ], DetailPage);
@@ -136,7 +136,7 @@ __decorate([
 ], HomePage.prototype, "nav", void 0);
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/mmartins/Documents/bitbucket/appcerveja/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      App Cerveja\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  Empresas\n  <ion-list>\n      <button ion-item *ngFor="let company of companies" (click)="goToDetail(company.id)">\n        {{ company.title }}\n      </button>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/mmartins/Documents/bitbucket/appcerveja/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      App Cerveja\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h5>Empresas</h5>\n  <ion-list>\n\n\n    <ion-card *ngFor="let company of companies" (click)="goToDetail(company.id)">\n\n      <ion-item>\n        <ion-avatar item-start>\n          <!-- <img src="img/marty-avatar.png"> -->\n          <ion-icon name="ios-beer-outline"></ion-icon>\n        </ion-avatar>\n        <h1>{{ company.title }}</h1>\n        <p> {{ company.phone}}</p>\n      </ion-item>\n\n      <img src="img/advance-card-bttf.png">\n\n      <ion-card-content>\n        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!\n          Whoa. This is heavy.</p>\n      </ion-card-content>\n\n      <ion-row>\n        <ion-col>\n          <button ion-button icon-left clear small>\n            <ion-icon name="thumbs-up"></ion-icon>\n            <div>12 Likes</div>\n          </button>\n        </ion-col>\n        <ion-col>\n          <button ion-button icon-left clear small>\n            <ion-icon name="text"></ion-icon>\n            <div>4 Comments</div>\n          </button>\n        </ion-col>\n        <ion-col center text-center>\n          <ion-note>\n            11h ago\n          </ion-note>\n        </ion-col>\n      </ion-row>\n\n    </ion-card>\n\n  </ion-list>\n</ion-content>'/*ion-inline-end:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__services_companies_service__["a" /* CompaniesService */]])
 ], HomePage);
@@ -264,7 +264,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/mmartins/Documents/bitbucket/appcerveja/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/mmartins/Documents/bitbucket/appcerveja/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/digaha/Documentos/Projetos Ionic/appcerveja/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -290,9 +290,9 @@ var CompaniesService = (function () {
     function CompaniesService() {
         this.companies = [
             { id: 1, title: "Ponto da Cerveja", address: "R. Salesianos, 425", neighborhood: "Pq. das Orquídeas", phone: "35 3551 7001" },
-            { id: 2, title: "Emporio da Cerveja" },
-            { id: 3, title: "Cervejao" },
-            { id: 4, title: "Bar do Broa" },
+            { id: 2, title: "Emporio da Cerveja", address: "R. São João, 45", neighborhood: "Pq. Municípios", phone: "35 3551 1145" },
+            { id: 3, title: "Cervejao", address: "R. Alfreds, 5", neighborhood: "Taboão", phone: "35 3551 8801" },
+            { id: 4, title: "Bar do Broa", address: "R. Alameda Jośe das Alves, 1025", neighborhood: "Jardim Alvorada", phone: "35 3551 5597" },
             { id: 5, title: "Tonin Atacado" },
             { id: 6, title: "RVM - Good Stop" }
         ];

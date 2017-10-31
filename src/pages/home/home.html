@@ -7,10 +7,49 @@
 </ion-header>
 
 <ion-content padding>
-  Empresas
+  <h5>Empresas</h5>
   <ion-list>
-      <button ion-item *ngFor="let company of companies" (click)="goToDetail(company.id)">
-        {{ company.title }}
-      </button>
-    </ion-list>
+
+
+    <ion-card *ngFor="let company of companies" (click)="goToDetail(company.id)">
+
+      <ion-item>
+        <ion-avatar item-start>
+          <!-- <img src="img/marty-avatar.png"> -->
+          <ion-icon name="ios-beer-outline"></ion-icon>
+        </ion-avatar>
+        <h1>{{ company.title }}</h1>
+        <p> {{ company.phone}}</p>
+      </ion-item>
+
+      <img src="img/advance-card-bttf.png">
+
+      <ion-card-content>
+        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+          Whoa. This is heavy.</p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>12 Likes</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+
+  </ion-list>
 </ion-content>
