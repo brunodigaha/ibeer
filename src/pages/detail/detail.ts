@@ -14,11 +14,11 @@ import { CompaniesService } from "../../services/companies.service"
   templateUrl: 'detail.html',
 })
 export class DetailPage {
-  company = {id: null, title: null};
+  company = { id: null, title: null };
   id = null;
   constructor(public navCtrl: NavController, public navParams: NavParams, public companiesService: CompaniesService) {
     this.id = navParams.get('id');
-    if(this.id != 0){
+    if (this.id != 0) {
       this.company = companiesService.getCompany(this.id);
     }
   }
