@@ -12,24 +12,41 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <ion-list>
-    <ion-item>
-      <ion-label floating>Empresa</ion-label>
-      <ion-input type="text" disabled="true" [(ngModel)]="company.title"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label floating>Endereço</ion-label>
-        <ion-input type="text" disabled="true" [(ngModel)]="company.address"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label floating>Bairro</ion-label>
-        <ion-input type="text" disabled="true" [(ngModel)]="company.neighborhood"></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-label floating>Telefone</ion-label>
-        <ion-input type="text" disabled="true" [(ngModel)]="company.phone"></ion-input>
-    </ion-item>
+      <ion-card>
+          
+          <ion-item>
+            <ion-avatar item-start>
+              <!-- <img src="img/marty-avatar.png"> -->
+              <ion-icon name="ios-beer-outline"></ion-icon>
+            </ion-avatar>
+            <h1>{{ company.title }}</h1>
+            <p> {{ company.phone }}</p>
+            <p> {{ company.address }}</p>
+          </ion-item>
+
+          <img src="img/advance-card-bttf.png">
+
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>12 Likes</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon name="text"></ion-icon>
+                <div>4 Comments</div>
+              </button>
+            </ion-col>
+            <ion-col center text-center>
+              <ion-note>
+                11h ago
+              </ion-note>
+            </ion-col>
+          </ion-row>
+        </ion-card>
   </ion-list>
 </ion-content>
