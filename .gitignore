@@ -19,6 +19,7 @@ node_modules/
 tmp/
 temp/
 $RECYCLE.BIN/
+www/build
 
 .DS_Store
 Thumbs.db
