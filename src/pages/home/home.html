@@ -8,8 +8,9 @@
 
 <ion-content padding>
   <ion-list>
-    <span>{{ length }} Empresas</span>
-    <ion-card *ngFor="let company of companies" (click)="goToDetail(company.id)">
+    <!-- <span>{{ length }} Empresas</span> -->
+    <span>xx Empresas</span>
+    <ion-card *ngFor="let company of companies | async" (click)="goToDetail(company.id)">
       <ion-item>
         <ion-avatar item-start>
           <img src="../../assets/imgs/thumb-{{company.nickname}}.png">
