@@ -11,6 +11,18 @@ import { CompaniesService } from '../services/companies.service';
 import { DetailPage } from '../pages/detail/detail';
 import { ModalContentPage } from '../pages/detail/detail-modal-coments'
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyABH3q2jUn4RYYZg7haCtSvDa1M_9-sSVY",
+    authDomain: "appcerveja-c7193.firebaseapp.com",
+    databaseURL: "https://appcerveja-c7193.firebaseio.com",
+    storageBucket: "appcerveja-c7193.appspot.com",
+    messagingSenderId: "73842860695"
+  };
+
 @NgModule({
   declarations: [
     MyApp,
@@ -20,7 +32,10 @@ import { ModalContentPage } from '../pages/detail/detail-modal-coments'
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

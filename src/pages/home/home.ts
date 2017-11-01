@@ -11,7 +11,10 @@ export class HomePage {
   companies = [];
   @ViewChild('myNav') nav: NavController
   constructor(public navCtrl: NavController, public companiesService : CompaniesService) {
-    this.companies = companiesService.getCompanies();
+    // this.companies = companiesService.getCompanies();
+    companiesService.getCompanies().subscribe( companies => {
+      this.companies = Object.assign(companies);
+    });
   }
 
   public goToDetail(id){

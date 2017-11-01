@@ -17,12 +17,31 @@ import { CallNumber } from '@ionic-native/call-number'
   templateUrl: 'detail.html'
 })
 export class DetailPage {
-  company = { id: null, title: null };
+  company = { 
+    id: null,
+    title: null,
+    nickname: null,
+    address: null,
+    neighborhood: null,
+    city: null,
+    state: null,
+    zipcode: null,
+    phone: null
+  };
   id = null;
   constructor(public navCtrl: NavController, public navParams: NavParams, public companiesService: CompaniesService, public modalCtrl: ModalController, private callNumber: CallNumber) {
     this.id = navParams.get('id');
     if (this.id != 0) {
-      this.company = companiesService.getCompany(this.id);
+      // this.company = companiesService.getCompany(this.id);
+      companiesService.getCompany(this.id).subscribe(company => {
+        try {
+          this.company = Object.assign(company);
+          throw new TypeError("Error message");
+        }
+        catch (e){
+          console.log((<Error>e).message);//conversion to Error type
+        }
+      });
     }
   }
 
