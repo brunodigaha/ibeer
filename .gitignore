@@ -19,7 +19,7 @@ node_modules/
 tmp/
 temp/
 $RECYCLE.BIN/
-www/build
+www/build/
 
 .DS_Store
 Thumbs.db
@@ -27,7 +27,6 @@ UserInterfaceState.xcuserstate
 .env
 
 .package.tmp.json
-json_load_companies.json
 
 src/themes/version.scss
 scripts/e2e/webpackEntryPoints.json
