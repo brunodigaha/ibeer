@@ -13,18 +13,11 @@
 </ion-header>
 
 <ion-content padding>
-
-
-
-  <img src="../../assets/imgs/prontocerveja.png">
+  <img src="../../assets/imgs/large-{{company.nickname}}.png">
   <ion-item>
-    <!-- <ion-avatar item-start>
-          <img src="img/marty-avatar.png">
-          <ion-icon name="ios-beer-outline"></ion-icon>
-        </ion-avatar> -->
     <h1>{{ company.title }}</h1>
     <p><ion-icon name="call"> {{ company.phone }} </ion-icon></p>
-    <p><ion-icon name="home"> {{ company.address }}</ion-icon></p>
+    <p><ion-icon name="home"> {{ company.address }} - {{ company.city }}/{{ company.state }}</ion-icon></p>
   </ion-item>
   <ion-row>
       <ion-col>
