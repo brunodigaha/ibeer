@@ -13,7 +13,7 @@
     <ion-card *ngFor="let company of companies | async" (click)="goToDetail(company.id)">
       <ion-item>
         <ion-avatar item-start>
-          <img src="../../assets/imgs/thumb-{{company.nickname}}.png">
+          <img src="{{company.thumb}}">
         </ion-avatar>
         <h2>{{ company.title }}</h2>
         <p> {{ company.phone}}</p>
