@@ -26,7 +26,8 @@ export class DetailPage {
     city: null,
     state: null,
     zipcode: null,
-    phone: null
+    phone: null,
+    comments: null
   };
   id = null;
   constructor(public navCtrl: NavController, public navParams: NavParams, public companiesService: CompaniesService, public modalCtrl: ModalController, private callNumber: CallNumber) {
