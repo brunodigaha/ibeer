@@ -8,6 +8,7 @@ import { CallNumber } from '@ionic-native/call-number'
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CompaniesService } from '../services/companies.service';
+import { AuthService } from '../services/auth.service'
 import { DetailPage } from '../pages/detail/detail';
 import { LoginPage } from '../pages/login/login';
 import { ModalContentPage } from '../pages/detail/detail-modal-coments'
@@ -44,6 +45,7 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     DetailPage,
+    LoginPage,
     ModalContentPage
   ],
   providers: [
@@ -51,6 +53,7 @@ export const firebaseConfig = {
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     CompaniesService,
+    AuthService,
     CallNumber
   ]
 })

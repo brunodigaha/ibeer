@@ -17,7 +17,7 @@ import { CallNumber } from '@ionic-native/call-number'
   templateUrl: 'detail.html'
 })
 export class DetailPage {
-  company = { 
+  company = {
     id: null,
     title: null,
     nickname: null,
@@ -39,17 +39,17 @@ export class DetailPage {
           this.company = Object.assign(company);
           throw new TypeError("Error message");
         }
-        catch (e){
+        catch (e) {
           console.log((<Error>e).message);//conversion to Error type
         }
       });
     }
   }
 
-  public callPhone(phone){
+  public callPhone(phone) {
     this.callNumber.callNumber(phone, true)
-    .then(() => console.log('Launched dialer!'))
-    .catch(() => console.log('Error launching dialer'));
+      .then(() => console.log('Launched dialer!'))
+      .catch(() => console.log('Error launching dialer'));
   }
 
   ionViewDidLoad() {
