@@ -77,6 +77,19 @@
         "state": "MG",
         "zipcode": "37800-000",
         "phone": "35 3551 3587"
+      },
+      "7" : {
+        "id": 7,
+        "title": "Cervejaria Tavares",
+        "nickname": "cervejariatavares",
+        "thumb": "https://firebasestorage.googleapis.com/v0/b/appcerveja-c7193.appspot.com/o/large-cervejariatavares.png?alt=media&token=bd425c9c-ed8d-4f1a-b97b-51db87da47ca",
+        "large": "https://firebasestorage.googleapis.com/v0/b/appcerveja-c7193.appspot.com/o/large-cervejariatavares.png?alt=media&token=bd425c9c-ed8d-4f1a-b97b-51db87da47ca",
+        "address": "R. Custódio Ribeiro Sobrinho, 95",
+        "neighborhood": "Centro",
+        "city": "Guaxupé",
+        "state": "MG",
+        "zipcode": "37800-000",
+        "phone": "35 3551 5060"
       }
     }
   }
