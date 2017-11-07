@@ -12,6 +12,8 @@ import { HomePage } from '../home/home'
  * 
  * ID Facebook = 387450138343096
  * 
+ * ionic cordova plugin add cordova-plugin-facebook4 --variable APP_ID="387450138343096" --variable APP_NAME="GuaxuBeer"
+ * 
  */
 
 @IonicPage()

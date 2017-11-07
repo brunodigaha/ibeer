@@ -27,6 +27,7 @@
     "@ionic/storage": "2.0.1",
     "angularfire2": "^5.0.0-rc.3",
     "call-number": "^1.0.1",
+    "cordova-plugin-facebook4": "^1.9.1",
     "firebase": "^4.6.0",
     "ionic-angular": "3.8.0",
     "ionicons": "3.0.0",
@@ -42,7 +43,11 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "mx.ferreyra.callnumber": {}
+      "mx.ferreyra.callnumber": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "387450138343096",
+        "APP_NAME": "GuaxuBeer"
+      }
     }
   }
 }
