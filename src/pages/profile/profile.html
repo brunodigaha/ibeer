@@ -7,12 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>profile</ion-title>
+    <ion-title>Perfil</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-avatar item-left>
+      <img [src]="userProfile?.photoURL" alt="User Profile Picture" />
+    </ion-avatar>
+    <h2>{{ userProfile?.displayName }}</h2>
+    <p>{{ userProfile?.email }}</p>
+  </ion-item>
+
 
 </ion-content>

@@ -18,6 +18,10 @@ export class AuthService {
         this.islogin = true;
     }
 
+    getUser(): firebase.User {
+        return this.afAuth.auth.currentUser;
+    }
+
     facebookLogin(): Promise<any> {
         return this.facebook
             .login(['email'])
