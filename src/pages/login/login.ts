@@ -9,6 +9,9 @@ import { HomePage } from '../home/home'
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
+ * 
+ * ID Facebook = 387450138343096
+ * 
  */
 
 @IonicPage()
@@ -36,7 +39,7 @@ export class LoginPage {
     // this.authProvider.facebookLogin();
     this.authservice.login();
     this.navCtrl.push(HomePage);
-    
+
   }
 
 }
