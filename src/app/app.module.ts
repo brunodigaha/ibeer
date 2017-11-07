@@ -12,6 +12,7 @@ import { CompaniesService } from '../services/companies.service';
 import { AuthService } from '../services/auth.service'
 import { DetailPage } from '../pages/detail/detail';
 import { LoginPage } from '../pages/login/login';
+import { ProfilePage } from '../pages/profile/profile'
 import { ModalContentPage } from '../pages/detail/detail-modal-coments'
 
 import { AngularFireModule } from 'angularfire2';
@@ -32,6 +33,7 @@ export const firebaseConfig = {
     HomePage,
     DetailPage,
     LoginPage,
+    ProfilePage,
     ModalContentPage
   ],
   imports: [
@@ -47,6 +49,7 @@ export const firebaseConfig = {
     HomePage,
     DetailPage,
     LoginPage,
+    ProfilePage,
     ModalContentPage
   ],
   providers: [
