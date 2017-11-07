@@ -38,9 +38,9 @@ export class LoginPage {
   }
 
   facebookLogin(): void {
-    // this.authProvider.facebookLogin();
-    this.authservice.login();
-    this.navCtrl.push(HomePage);
+    this.authservice.facebookLogin();
+    // this.authservice.login();
+    // this.navCtrl.push(HomePage);
 
   }
 
